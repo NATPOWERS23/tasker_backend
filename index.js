@@ -2,10 +2,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 import multer from 'multer';
 
-import { taskCreateValidation } from './validations/task.js'
-import { UserController, TasksController } from './controllers/index.js'
-import { checkAuth, handleValidationErrors } from './utils/index.js';
-import { registrationValidation, loginValidation } from './validations/auth.js';
+import { taskCreateValidation } from './backend/validations/task.js'
+import { UserController, TasksController } from './backend/controllers/index.js'
+import { checkAuth, handleValidationErrors } from './backend/utils/index.js';
+import { registrationValidation, loginValidation } from './backend/validations/auth.js';
 
 mongoose
     .connect('mongodb+srv://crisa:hardcore15@cluster0.qw56l.mongodb.net/dashboardDB?retryWrites=true&w=majority')
