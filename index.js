@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import multer from 'multer';
 import cors from 'cors';
-import 'dotenv/config'
+import dotenv from 'dotenv'
 
 import { taskCreateValidation } from './backend/validations/task.js'
 import { postCreateValidation } from './backend/validations/post.js'
