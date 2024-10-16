@@ -2,8 +2,9 @@ import TaskModel from  '../models/Task.js'
 
 export const getAllTasks = async (req, res) => {
     try {
-        const tasks = await TaskModel.find().populate('user').exec();
-
+        const userId = req.query.userId;
+        const tasks = await TaskModel.find({ user: userId }).populate('user').exec();
+        
         res.json(tasks)
     } catch (error) {
         handleUnexpectedError(error, res);
