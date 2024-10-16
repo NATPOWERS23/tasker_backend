@@ -15,7 +15,6 @@ const monoUrl = process.env.MONGO_URL;
 
 mongoose
     .connect(monoUrl)
-    .connect(process.env.MONGO_URL)
     .then(() => console.log('DB'))
     .catch((err) => console.log('DB error: ', err));
 
